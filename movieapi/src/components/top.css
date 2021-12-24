@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.top{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    background-color: rosybrown;
+    padding-bottom: 5px;
+    z-index: 100;
+    box-shadow: 0px 1px 5px black;
+    cursor: pointer;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    
+}
+@media (max-width: 120px){
+    .top{
+        padding-top: 15px;
+        font-size: 6vw;
+
+    }
+    
+}
