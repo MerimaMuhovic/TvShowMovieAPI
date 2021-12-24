@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useModal } from 'react-hooks-use-modal';
 import { MoviesContext } from "../api-context/movie.context"
-
+import {FaRegWindowClose} from "react-icons/fa"
 
 
 const HomeCard = () => {
@@ -34,20 +34,21 @@ const HomeCard = () => {
 <div className = "details">
 
   <button type = "button" className = "btn details-close-btn" id = "details-close-btn" onClick={close}>
+<i className="fas fa-times"><FaRegWindowClose/></i>
      </button>
 
  <div className = "details-content">
 
-     <h2 className = "title">Meals Name Here</h2>
-     <p className = "category">Category Name</p>
+     <h2 className = "title">{movie.title}</h2>
+     <p className = "category">{movie.rating}</p>
 
        <div className = "instruct">
-         <h3>Instructions:</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+         <h3>Overview:</h3>
+         <p>{movie.resume}</p>
        </div>
 
        <div className = "img">
-         <img src = "food.jpg" alt = ""/>
+         <img src = {movie.picture} alt = ""/>
        </div>
 
        <div className = "details-link">
