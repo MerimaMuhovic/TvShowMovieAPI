@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useModal } from 'react-hooks-use-modal';
 import { TvShowContext } from "../api-context/tvshow.context"
+import {FaRegWindowClose} from "react-icons/fa"
 
 
 
@@ -27,27 +28,28 @@ const TvShowCard = () => {
               <img src ={tvshows.picture} alt = "movie"/>
             </div>
             <div className = "home-name" key={tvshows.id}>
-              <h3>{tvshows.title}</h3>
+              <h3>{tvshows.name}</h3>
               <a href = "#" className = "home-details-btn" onClick={open}>Get Details</a>
               <Modal>
 
 <div className = "details">
 
   <button type = "button" className = "btn details-close-btn" id = "details-close-btn" onClick={close}>
+<i className="fas fa-times"><FaRegWindowClose/></i>
      </button>
 
  <div className = "details-content">
 
-     <h2 className = "title">Meals Name Here</h2>
-     <p className = "category">Category Name</p>
+     <h2 className = "title">{tvshows.name}</h2>
+     <p className = "category">Rating : {tvshows.rating}</p>
 
        <div className = "instruct">
-         <h3>Instructions:</h3>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+         <h3>Overview:</h3>
+         <p>{tvshows.resume}</p>
        </div>
 
        <div className = "img">
-         <img src = "food.jpg" alt = ""/>
+         <img src ={tvshows.picture} alt = ""/>
        </div>
 
        <div className = "details-link">
@@ -70,6 +72,7 @@ const TvShowCard = () => {
        
 ))}
       </div>
+
 
     
     )
