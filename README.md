@@ -1,8 +1,12 @@
 To run this Website, you have to first clone the repository from a git clone.
+
 The second step when opening the is to navigate to the movieapi folder : cd movieapi
+
 The third step you have to install modules, icons :
+
                 1. npm install react-scripts --save
                 2. npm install react-icons
+                
                 
 Then you can write npm start and your website should be running.
 
